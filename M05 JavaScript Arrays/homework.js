@@ -109,6 +109,26 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+
+   var mult =1;
+  
+   if (arguments.length===0){
+      return 0;
+   }else if (arguments.length===1){
+      return arguments[0];
+   } else{
+      // const initialValue = 0;
+      // var sumWithInitial = arguments.reduce((accumulator, currentValue) => accumulator * currentValue, initialValue);    
+      // return sumWithInitial;
+      for (let index = 1; index < arguments.length; index++) {
+         
+         mult = mult * array[index];
+         
+      }
+      return mult;
+
+   }
+
 }
 
 function cuentoElementos(array) {
@@ -248,14 +268,13 @@ function continueStatement(num) {
    let i =0;
    var arreglo = [];
    while (i<10) {
-      num = num + 2;
-      arreglo.push(num);
-      if (i == 5){
-         i = i+1;
+      i = i+1;
+      if (i==5){
          continue;
       }
-      i = i+1;
       
+      num = num + 2;
+      arreglo.push(num);
    }
    return arreglo;
    
