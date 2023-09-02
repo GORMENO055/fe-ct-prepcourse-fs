@@ -6,6 +6,7 @@ function deObjetoAarray(objeto) {
    // Estos elementos debe ser cada par clave:valor del objeto recibido.
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
+
 }
 
 function numberOfCharacters(string) {
@@ -14,7 +15,31 @@ function numberOfCharacters(string) {
    // Las letras deben estar en orden alfabético.
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
+   var arreglo= string.split('');
+   var contador =0;
+   var res=[];
+   arreglo.sort();
+   console.log(arreglo);
+   var objeto={};
+   for (let i = 0; i < arreglo.length; i++) {
+      var letra = arreglo[i];
+      
+      for (let j = 0; j < arreglo.length; j++) {
+
+         if(arreglo[j]==letra){
+            contador = contador + 1;
+         }
+         
+      }
+      //res.push(letra + ': ' +contador);
+      objeto[letra] = contador;
+      contador =0;
+      
+   }
+
+   return objeto;
 }
+
 
 function capToFront(string) {
    // Recibes un string con algunas letras en mayúscula y otras en minúscula.
@@ -22,6 +47,7 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
+   
 }
 
 function asAmirror(frase) {
