@@ -14,7 +14,7 @@ class Persona {
       
    }
    detalle(){
-      return this;
+      return this.nombre = nombre;
    }
 }
 
