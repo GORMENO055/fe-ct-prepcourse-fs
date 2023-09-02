@@ -70,10 +70,10 @@ function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
-   const initialValue = 0;
-   var sumWithInitial = arrayOfNums.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+   const valorInicial = 0;
+   var suma = arrayOfNums.reduce((accumulator, currentValue) => accumulator + currentValue, valorInicial);
 
-   return sumWithInitial;
+   return suma;
 }
 
 
@@ -81,10 +81,10 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
-   const initialValue = 0;
-   var sumWithInitial = resultadosTest.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+   const valorInicial = 0;
+   var suma = resultadosTest.reduce((accumulator, currentValue) => accumulator + currentValue, valorInicial);
 
-   var promedio = sumWithInitial/resultadosTest.length;
+   var promedio = suma/resultadosTest.length;
    return promedio;
 
 }
