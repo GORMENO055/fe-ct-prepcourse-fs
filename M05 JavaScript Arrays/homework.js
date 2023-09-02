@@ -120,9 +120,9 @@ function multiplicarArgumentos() {
       // const initialValue = 0;
       // var sumWithInitial = arguments.reduce((accumulator, currentValue) => accumulator * currentValue, initialValue);    
       // return sumWithInitial;
-      for (let index = 1; index < arguments.length; index++) {
+      for (let index = 0; index < arguments.length; index++) {
          
-         mult = mult * array[index];
+         mult = mult * arguments[index];
          
       }
       return mult;
