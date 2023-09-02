@@ -158,15 +158,11 @@ function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
-   // var igual=array[0];
-   // array.forEach((elem) => {
-   //    if(elem!=igual){
-   //       return false;
-   //    }
-
-   // });
+  
+   return array.every(num=> array[0]==num);
    
 }
+console.log(todosIguales([45,45,45]));
 
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
@@ -176,7 +172,7 @@ function mesesDelAño(array) {
    let nuevo = [];
    array.forEach((elem)=>{
       if(elem==='Enero' || elem==='Marzo' || elem==='Noviembre'){
-         nuevo.unshift(elem);
+         nuevo.push(elem);
       }
    });
 
@@ -207,13 +203,13 @@ function mayorACien(array) {
    var arreglo = [];
    array.map((num)=>{
       if(num>100){
-         arreglo.unshift(num);
+         arreglo.push(num);
       }
       
    });
    return arreglo;
 }
-
+console.log(mayorACien([100, 4, 56, 78, 200, 120, 7, 160, 148, 22]));
 
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
@@ -226,7 +222,21 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   let i =0;
+   var arreglo = [];
+   while (i<10) {
+      num = num + 2;
+      arreglo.push(num);
+      if (num == i){
+         return "Se interrumpió la ejecución";
+         break;
+      }
+      i = i+1;
+      
+   }
+   return arreglo;
 }
+console.log(breakStatement(10));
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
@@ -235,8 +245,22 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   let i =0;
+   var arreglo = [];
+   while (i<10) {
+      num = num + 2;
+      arreglo.push(num);
+      if (i == 5){
+         i = i+1;
+         continue;
+      }
+      i = i+1;
+      
+   }
+   return arreglo;
    
 }
+console.log(continueStatement(60));
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
