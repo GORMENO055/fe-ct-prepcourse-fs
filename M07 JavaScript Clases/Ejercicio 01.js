@@ -36,20 +36,8 @@ function agregarStringInvertida() {
    // Agrega un método al prototipo de "String" que devuelva la misma cadena de caracteres, pero invertida.
    // El método debe llamarse "reverse".
    // [PISTA]: necesitarás utilizar el objeto "this".
-   String.prototype.reverse(cad)=function () {
-   var separarCadena = cad.split(""); // var separarCadena = "hola".split("");
-    
- 
-    // Paso 2. Usa el método reverse() para invertir el nuevo arreglo creado
-    var invertirArreglo = separarCadena.reverse(); // var invertirArreglo = ["h", "o", "l", "a"].reverse();
-    // ["a", "l", "o", "h"]
- 
-    // Paso 3. Usa el método join() para unir todos los elementos del arreglo en una cadena
-    var unirArreglo = invertirArreglo.join(""); // var unirArreglo = ["a", "l", "o", "h"].join("");
-    // "aloh"
-    
-    //Paso 4. Devolver la cadena invertida
-    return unirArreglo; // "aloh"
+   String.prototype.reverse=function () {
+      return this.split("").reverse().join("");
 
    };
 }
